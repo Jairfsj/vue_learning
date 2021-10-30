@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello, Vue.js!</title>
+  <script src="./assets/js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+     <p>Digite algo para ser exibido</p>    
+    <input type="text" v-model="conteudo" placeholder="Digite algo">
+    <p>{{conteudo}}</p>
+  </div>
+
+  <script> 
+    var app = new Vue({
+     el:'#app',
+      data: {
+        mensagem: '<u>Hello, Vue.js! My hello, World!</u>',
+         listas: [
+          {
+            id: 1,
+            nome:'Jair francisco da Silva Júnior',
+            idioma: "Português"
+          },
+          {
+            id: 2,
+            nome: "Robert",
+            idioma: "English"
+          },
+          {
+            id: 3,
+            nome:"CypressHill",
+            idioma: "Chicano"
+
+          }
+        ],
+       
+        verifica: true,
+        numero: 6,
+        conteudo: ""
+      }
+      
+    });
+   </script> 
+
+</body>
+</html> 
