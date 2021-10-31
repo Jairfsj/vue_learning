@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello, Vue.js!</title>
+  <script src="./assets/js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul v-if="verifica">
+      <li v-for="lista in listas">      
+        ID: <b>{{ lista.id}}</b><br>
+        NOME: <b>{{ lista.nome}}</b><br>
+        IDIOMA: <b>{{ lista.idioma}}</b><br>
+      </li>
+    </ul>
+    <p v-else><b>Não há dado algum a ser exibido.</b></p>
+  </div>
+
+  <script> 
+    var app = new Vue({
+     el:'#app',
+      data: {
+        mensagem: '<u>Hello, Vue.js! My hello, World!</u>',
+         listas: [
+          {
+            id: 1,
+            nome:'Jair francisco da Silva Júnior',
+            idioma: "Português"
+          },
+          {
+            id: 2,
+            nome: "Robert Nesta Marley",
+            idioma: "English"
+          },
+          {
+             id: 3,
+             nome:"CypressHill",
+             idioma: "Chicano"
+
+          }
+         ],
+          verifica: false
+
+
+      }
+
+    });
+   </script> 
+
+</body>
+</html> 
