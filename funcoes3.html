@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello, Vue.js!</title>
+  <script src="./assets/js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{mensagem}}</h1>
+    <button v-on:click="exibeAlerta"><b>Click aqui</b></button>
+    <br><br>
+    <button v-on:click="exibeAlerta"><b>Click aqui</b></button>
+
+  </div>
+
+  <script> 
+    var app = new Vue({
+     el:'#app',
+      data: {
+        mensagem: 'Hello, Vue.js! My hello, World!',
+         listas: [
+           {
+            id: 1,
+            nome:'Jair francisco da Silva Júnior',
+            idioma: "Português"
+           },
+           {
+            id: 2,
+            nome: "Robert Nesta Marley",
+            idioma: "English"
+           },
+           {
+             id: 3,
+             nome:"CypressHill",
+             idioma: "Chicano"
+           }
+         ],
+          verifica: true
+
+        },
+        
+         methods: {
+
+           exibeAlerta: function(){
+             var mensagem = "Essa daqui é outra mensagem"
+             alert("Está funcionando esse botão!")
+           },
+           
+           mudaCor: function(){
+
+           }
+         }
+      });
+ </script> 
+</body>
+</html> 
