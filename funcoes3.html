@@ -7,10 +7,10 @@
 </head>
 <body>
   <div id="app">
-    <h1>{{mensagem}}</h1>
+    <h1 :style="myStyle">{{mensagem}}</h1>
     <button v-on:click="exibeAlerta"><b>Click aqui</b></button>
     <br><br>
-    <button v-on:click="exibeAlerta"><b>Click aqui</b></button>
+    <button v-on:click="mudaCor"><strong>Mude a cor do h1</strong></button>
 
   </div>
 
@@ -36,8 +36,10 @@
              idioma: "Chicano"
            }
          ],
-          verifica: true
-
+          verifica: true,
+          myStyle: {
+          color: 'red'
+        }
         },
         
          methods: {
