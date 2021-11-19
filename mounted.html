@@ -11,7 +11,7 @@
     <button v-on:click="mudaMensagem"><b>Click aqui para mudar á mensagem!</b></button>
     <br><br>
     <button v-on:click="mudaMensagem('Novo contéudo')"><strong>Mude a cor do h1</strong></button>
-
+  <div id"app">
   </div>
 
   <script> 
@@ -19,21 +19,19 @@
      el:'#app',
       data: {
         mensagem: 'Hello, Vue.js! My hello, World!',
-       }
-        },
-        
-         methods: {
+     },
+      
+       methods: {
+         onLoadPage: function(){
+           alert( this.mensagem )
+        }
+      },
 
-           mudaMensagem: function(param){
-             this.mensagem = param + '' + this.texto
-           },
-           
-           mudaCor: function(){
-             this.verifica ? this.myStyle = { color: 'red' }: this.myStyle = { color: 'blue' };
-             this.verifica = !this.verifica
-           }
-         }
-      });
+      mounted: function(){
+         this.onLoadPage()}
+         
+         
+       });
  </script> 
 </body>
 </html> 
