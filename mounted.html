@@ -7,31 +7,27 @@
 </head>
 <body>
   <div id="app">
-    <h1 :style="myStyle">{{mensagem}}</h1>
-    <button v-on:click="mudaMensagem"><b>Click aqui para mudar á mensagem!</b></button>
-    <br><br>
-    <button v-on:click="mudaMensagem('Novo contéudo')"><strong>Mude a cor do h1</strong></button>
-  <div id"app">
   </div>
 
-  <script> 
-    var app = new Vue({
-     el:'#app',
-      data: {
-        mensagem: 'Hello, Vue.js! My hello, World!',
-     },
-      
+  <script>
+     var app = new Vue({
+       el: '#app',
+       data:{
+         mensagem: 'Hello, Vue.js!!!',
+       },
        methods: {
          onLoadPage: function(){
            alert( this.mensagem )
         }
       },
 
-      mounted: function(){
-         this.onLoadPage()}
+       mounted: function(){
+         this.onLoadPage()
+       }
          
          
        });
+      
  </script> 
 </body>
 </html> 
