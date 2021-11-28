@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello, Vue.js!</title>
+  <script src="./assets/js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+       <HeaderComponent/>
+    </ul>
+   </div>
+
+  <script>
+  
+   Vue.component('headercomponent', { template: '<li>Meu cabeçalho</li>' });
+   
+
+   var app = new Vue({
+     el: '#app',
+     data:{
+       mensagem: 'Hello, Vue.js!!!',
+   },
+    
+   methods: {
+     onLoadPage: function(){
+       alert( this.mensagem )
+     }
+   }
+   });
+      
+ </script> 
+</body>
+</html> 
