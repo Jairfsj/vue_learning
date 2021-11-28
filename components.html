@@ -7,20 +7,25 @@
 </head>
 <body>
   <div id="app">
-    <h1>{{ mensagem }}</h1>
+   <header-component></header-component> 
   </div>
 
   <script>
-     var app = new Vue({
-       el: '#app',
-       data:{
-         mensagem: 'Hello, Vue.js!!!',
-       },
-       methods: {
-         onLoadPage: function(){
-           alert( this.mensagem )
-         }
-       }
+  
+   Vue.component('header-component', { template: '<h1>Meu cabeçalho</h1>' });
+
+
+   var app = new Vue({
+     el: '#app',
+     data:{
+       mensagem: 'Hello, Vue.js!!!',
+   },
+    
+   methods: {
+     onLoadPage: function(){
+       alert( this.mensagem )
+     }
+   }
    });
       
  </script> 
