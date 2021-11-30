@@ -2,44 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello, Vue.js!</title>
+  <title>Preços do  Bitcoin</title>
   <script src="./assets/js/vue.js"></script>
 </head>
 <body>
   <div id="app">
-    <ul>
-       <HeaderComponent
-         v-for="todo in todos"
-         v-bind:todo="todo"
-         v-bind:key="todo.id"
-       />
-    </ul>
+     <h1>{{titulo}}</h1>
    </div>
 
   <script>
   
-   Vue.component('headercomponent', { 
-     props: ['todo'], 
-     template: '<li>{{ todo.text }}</li>'
-   });
-   
+ 
 
    var app = new Vue({
      el: '#app',
      data:{
-       mensagem: 'Hello, Vue.js!!!',
-       todos:[ 
-         {id: 1, text: 'Clean Room'},
-         {id: 2, text: 'Wash utilities'},
-         {id: 3, text: 'Make reflections'}
-       ] 
-   },
+       titulo: 'Prices of bitcon', 
+      },
     
    methods: {
-     onLoadPage: function(){
-       alert( this.mensagem )
-     }
    }
+   
    });
       
  </script> 
