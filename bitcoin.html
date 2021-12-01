@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Preços do  Bitcoin</title>
+  <script src="assets/js/axios.js"></script>
   <script src="./assets/js/vue.js"></script>
-</head>
 <body>
   <div id="app">
      <h1>{{titulo}}</h1>
@@ -16,11 +16,12 @@
 
    var app = new Vue({
      el: '#app',
-     data:{
+     data: {
        titulo: 'Prices of bitcon', 
       },
     
-   methods: {
+     mounted() {
+       axios.get("https://apicoindesk.com/v1/bpi/currentprice.json").then( response => (console.log( response )) )
    }
    
    });
