@@ -11,15 +11,15 @@
      
      <ul v-for="info in infos">
        <li>
-         <h3>{{info.code}}</h3>
+         <h3><strong v-html="info.symbol"></strong> {{info.code}}</h3>
          <ul>
-           <li>Description: <strong>{{ info.description }}</strong></li>  
-           <li>Symbol: <strong v-html="info.symbol"></strong></li>
+           <li>Description: <strong>{{ info.description }}</strong></li>
+           <li>Rate: <strong>{{ info.rate }}</strong></li>  
+           <li>Float: <strong>{{ info.rate_float }}</strong></li>  
+
          </ul>
        </li>
-     </ul>
-
-     <pre>{{infos}}</h2>
+     </ul>   
    </div>
 
   <script>
